@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+openai
+python-dotenv
+playwright
+jsonschema
+fastapi
+uvicorn

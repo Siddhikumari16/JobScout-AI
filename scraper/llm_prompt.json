@@ -1,0 +1,15 @@
+{
+  "system": "You are an assistant that extracts structured fields from job descriptions.",
+  "instruction": "Return only a single JSON object matching the provided JSON Schema. Do not include any extra text or commentary.",
+  "schema_file": "schemas/job_schema.json",
+  "example": {
+    "input": "Title: Junior Java Developer\nLocation: Delhi NCR\nExperience: 0-2 years\nSkills: Java, SQL, Spring Boot\n\nWe are looking for a Junior Java Developer with experience in building REST APIs...",
+    "output": {
+      "title": "Junior Java Developer",
+      "skills": ["Java", "SQL", "Spring Boot"],
+      "experience_years": 1,
+      "location": "Delhi NCR",
+      "summary": "We are looking for a Junior Java Developer with experience in building REST APIs..."
+    }
+  }
+}
