@@ -8,7 +8,9 @@ function JobCard({ job }: any) {
       <p className="meta">{job.company} — {job.location}</p>
       <p className="skills">Skills: {(job.skills || []).join(', ')}</p>
       <p className="experience">Experience: {job.experience_years ?? 'N/A'}</p>
-      <p className="summary">{job.summary?.slice(0, 200)}...</p>
+      <p className="summary">
+  {job.summary?.replace(/<[^>]*>/g, '').slice(0, 200)}...
+</p>
       <p className="source">Source: {job.source}</p>
       <a className="view-btn" href={job.url} target="_blank" rel="noreferrer">View Job</a>
     </div>
