@@ -1,37 +1,40 @@
 # JobScout AI
 
-Initial project skeleton for JobScout AI — an AI-powered job research and scraping agent.
+JobScout AI is a full-stack job aggregation and search platform that collects job listings, normalizes job data, validates structured records, stores them in SQLite, and provides a searchable web interface.
 
-## Quickstart
+## 🚀 Features
 
-1. Create a virtual environment:
+- Job aggregation using external job APIs
+- Adapter-based job data normalization
+- Rule-based job information extraction
+- Optional LLM-based extraction
+- JSON Schema validation
+- SQLite database storage
+- Duplicate job detection using job URLs
+- FastAPI REST API
+- Search jobs by keyword
+- Filter jobs by skill
+- Filter jobs by location
+- Pagination support
+- React + Vite frontend
+- Responsive job listing interface
+- Direct links to original job postings
 
-```bash
-python -m venv venv
-```
+## 🏗️ Architecture
 
-2. Activate on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Run the basic scraper:
-
-```bash
-python scraper/job_scraper.py
-```
-
-AI extractor (rule-based):
-
-```
-python scraper/ai_extractor.py
-```
-
-To enable LLM-based extraction, set `OPENAI_API_KEY` in `.env` and install optional packages from `requirements.txt`.
+```text
+External Job Source
+       ↓
+Source Adapter
+       ↓
+Normalized Job Data
+       ↓
+Job Extraction
+       ↓
+JSON Schema Validation
+       ↓
+SQLite Database
+       ↓
+FastAPI REST API
+       ↓
+React + Vite Frontend
